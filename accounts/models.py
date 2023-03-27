@@ -70,16 +70,17 @@ class User(AbstractBaseUser, PermissionsMixin):
         default=False
     )
     is_staff = models.BooleanField(
-        _('staff status'),
+        verbose_name=_('staff status'),
         default=False,
     )
     is_active = models.BooleanField(
-        _('active'),
+        verbose_name=_('active'),
         default=True,
     )
     created_at = models.DateTimeField(
         verbose_name=_("created_at"),
-        auto_now_add=True)
+        auto_now_add=True
+    )
     updated_at = models.DateTimeField(
         verbose_name=_("updateded_at"),
         auto_now=True
